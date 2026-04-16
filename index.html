@@ -1,71 +1,84 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>महालक्ष्मी जंक शॉप</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>महालक्ष्मी जंक शॉप</title>
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial;
-            background: #f5f5f5;
-        }
+<style>
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #f4f6f8;
+}
 
-        header {
-            background: #2c3e50;
-            color: white;
-            padding: 15px;
-            text-align: center;
-        }
+/* HEADER */
+header {
+    background: #1e272e;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
 
-        nav {
-            background: #34495e;
-            padding: 10px;
-            text-align: center;
-        }
+/* NAV */
+nav {
+    background: #2f3640;
+    text-align: center;
+    padding: 10px;
+}
+nav a {
+    color: white;
+    margin: 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
 
-        nav a {
-            color: white;
-            margin: 10px;
-            text-decoration: none;
-            font-weight: bold;
-        }
+/* SECTION */
+section {
+    padding: 20px;
+}
 
-        section {
-            padding: 20px;
-        }
+/* CARD */
+.card {
+    background: white;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #ddd;
+}
 
-        .card {
-            background: white;
-            padding: 15px;
-            margin: 10px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px #ccc;
-        }
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+}
 
-        .btn {
-            background: green;
-            color: white;
-            padding: 10px;
-            text-decoration: none;
-            border-radius: 5px;
-            display: inline-block;
-        }
+/* BUTTON */
+.btn {
+    background: #27ae60;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
 
-        footer {
-            background: #2c3e50;
-            color: white;
-            text-align: center;
-            padding: 10px;
-        }
+/* INPUT */
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+}
 
-        input, textarea {
-            width: 100%;
-            padding: 10px;
-            margin: 5px 0;
-        }
-    </style>
+/* FOOTER */
+footer {
+    background: #1e272e;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+</style>
 </head>
 
 <body>
@@ -86,7 +99,7 @@
     <div class="card">
         <h2>हमारे बारे में</h2>
         <p>
-            हम आपके घर से सभी प्रकार का स्क्रैप खरीदते हैं जैसे लोहा, प्लास्टिक, तांबा, पीतल, अखबार आदि।
+            हम आपके घर से सभी प्रकार का स्क्रैप खरीदते हैं जैसे लोहा, तांबा, प्लास्टिक, पीतल, एल्यूमिनियम और अखबार।
             सही वजन और सही दाम हमारी पहचान है।
         </p>
     </div>
@@ -95,35 +108,37 @@
 <section id="items">
     <h2>हम क्या खरीदते हैं</h2>
 
-    <div class="card">🔩 लोहा (Iron)</div>
-    <div class="card">🔌 तांबा (Copper)</div>
-    <div class="card">🥫 एल्यूमिनियम (Aluminium)</div>
-    <div class="card">📦 प्लास्टिक (Plastic)</div>
-    <div class="card">📰 अखबार (Newspaper)</div>
-
+    <div class="grid">
+        <div class="card">🔩 लोहा</div>
+        <div class="card">🔌 तांबा</div>
+        <div class="card">🥫 एल्यूमिनियम</div>
+        <div class="card">📦 प्लास्टिक</div>
+        <div class="card">📰 अखबार</div>
+        <div class="card">🔧 पीतल</div>
+    </div>
 </section>
 
 <section id="rates">
     <h2>आज के रेट</h2>
 
-    <div class="card">लोहा – ₹30/kg</div>
-    <div class="card">तांबा – ₹900/kg</div>
-    <div class="card">एल्यूमिनियम – ₹120/kg</div>
-    <div class="card">प्लास्टिक – ₹14/kg</div>
-
+    <div class="grid">
+        <div class="card">लोहा – ₹30/kg</div>
+        <div class="card">तांबा – ₹900/kg</div>
+        <div class="card">एल्यूमिनियम – ₹200/kg</div>
+        <div class="card">प्लास्टिक – ₹14/kg</div>
+    </div>
 </section>
 
 <section id="contact">
     <h2>Pickup Request</h2>
 
-    <form>
-        <input type="text" placeholder="आपका नाम" required>
-        <input type="text" placeholder="मोबाइल नंबर" required>
-        <textarea placeholder="आपका एड्रेस"></textarea>
-        <button class="btn">Submit</button>
-    </form>
+    <input type="text" id="name" placeholder="आपका नाम" required>
+    <input type="text" id="mobile" placeholder="मोबाइल नंबर" required>
+    <textarea id="address" placeholder="आपका एड्रेस"></textarea>
 
-    <br>
+    <button class="btn" onclick="sendToWhatsApp()">Submit</button>
+
+    <br><br>
 
     <div class="card">
         <h3>📍 पता:</h3>
@@ -134,15 +149,34 @@
         </p>
     </div>
 
-    <a class="btn" href="https://wa.me/919711264570">
-        WhatsApp पर संपर्क करें
-    </a>
-
+    <a class="btn" href="https://wa.me/919711264570">WhatsApp पर संपर्क करें</a>
 </section>
 
 <footer>
-    <p>© 2026 महालक्ष्मी जंक शॉप | All Rights Reserved</p>
+    <p>© 2026 महालक्ष्मी जंक शॉप</p>
 </footer>
+
+<script>
+function sendToWhatsApp() {
+    var name = document.getElementById("name").value;
+    var mobile = document.getElementById("mobile").value;
+    var address = document.getElementById("address").value;
+
+    if(name === "" || mobile === ""){
+        alert("कृपया नाम और मोबाइल नंबर भरें");
+        return;
+    }
+
+    var message = "Pickup Request:%0A"
+        + "नाम: " + name + "%0A"
+        + "मोबाइल: " + mobile + "%0A"
+        + "एड्रेस: " + address;
+
+    var url = "https://wa.me/919711264570?text=" + message;
+
+    window.open(url, '_blank');
+}
+</script>
 
 </body>
 </html>
